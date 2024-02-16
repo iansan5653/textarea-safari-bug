@@ -1,8 +1,7 @@
 import "./App.css";
-import {useState} from "react";
 
 function App() {
-  const [body, setBody] = useState(`## Describe the bug
+  const body = `## Describe the bug
   A clear and concise description of what the bug is.
 
   ## To Reproduce
@@ -25,9 +24,9 @@ function App() {
   Add any other context about the problem here.
 
   ## Resolution
-  To be filled in by the person working on the ticket - please provide a short summary of the resolution`);
+  To be filled in by the person working on the ticket - please provide a short summary of the resolution`;
 
-  return <textarea value={body} onChange={(e) => setBody(e.target.value)} />;
+  return <textarea>{body}</textarea>;
 }
 
 export default App;
